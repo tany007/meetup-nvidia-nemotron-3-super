@@ -38,7 +38,11 @@ To be eligible for prizes, your submission must include:
 * **YouTube Demo:** A recorded video demonstrating the project.
 
 
-* **Blog Post:** A write-up shared on social media tagging **#NVIDIA #Nemotron #HydPy**.
+* **Medium Blog Post:** Publish a detailed write-up about your project and learning journey.
+
+* **LinkedIn Post:** Share your project publicly on LinkedIn and tag  
+  **HydPy @ Hyderabad Python User Group** and **@ Kavita Aroor** with hashtags  
+  **#NVIDIA #Nemotron #HydPy**
 
 
 
