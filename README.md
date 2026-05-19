@@ -4,7 +4,7 @@ Welcome to the official submission repository for the **Nemotron 3 Super Meetup 
 
 ## 📅 Important Timelines
 
-* **Submission Deadline:** 30th May 2026.
+* **Submission Deadline:** 1st June 2026.
 
 
 
@@ -47,15 +47,15 @@ To be eligible for prizes, your submission must include:
 1. **Fork** this repository.
 2. Create a folder under `submissions/[your_track]/[team_name]`.
 3. Include your code, architecture diagram, and a `README.md` containing:
-* Team members.
+* Team Name.
 * Project description.
 * Link to YouTube Demo.
-* Link to Social Media/Blog post.
+* Link to Medium Blog Post.
+* Link to LinkedIn Post.
 
 
-4. Submit a **Pull Request** to this main repository.
-5. Email your post link to **contact@hydpy.org**.
-
+4. Submit a **Pull Request** to this main repository.  
+5. Fill the submission form to provide your project details **https://forms.gle/E3TP4pUdMSaBfzKr5**  
 
 
 ## ⚖️ Judging Criteria
@@ -103,7 +103,6 @@ Encourage you to include a `README.md` inside ypur specific project folder with 
 ```markdown
 # Project Name: [Insert Name]
 **Track:** [e.g., Track 1 - Community Benefits Navigator]
-**Team Members:** [Name 1, Name 2]
 
 ### 🔗 Project Links
 - **YouTube Demo:** [Link]
