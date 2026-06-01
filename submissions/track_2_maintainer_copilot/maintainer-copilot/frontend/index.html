@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triage Copilot | GitHub Triage Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Sticky Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-icon">⌘</div>
+      <h1 class="brand-title">Triage Copilot</h1>
+    </div>
+    <div class="connection-status" id="connection-status-box">
+      <span class="status-dot" id="status-dot"></span>
+      <span id="status-text">Checking API Server...</span>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <main class="dashboard-grid">
+    
+    <!-- Sidebar: Input Forms -->
+    <aside class="sidebar">
+      
+      <!-- Section 1 Inputs: Issue Triage -->
+      <section class="card" aria-labelledby="triage-form-title">
+        <h2 class="card-title" id="triage-form-title">
+          <span>🔍</span> Issue Triage
+        </h2>
+        <form id="triage-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="repo-input">Repository (owner/repo)</label>
+            <input type="text" id="repo-input" placeholder="e.g., spring-projects/spring-boot" required value="spring-projects/spring-boot">
+          </div>
+          <div class="form-group">
+            <label for="issue-number-input">Issue Number</label>
+            <input type="number" id="issue-number-input" placeholder="e.g., 50491" required value="50491">
+          </div>
+          <button type="submit" class="btn" id="analyze-btn">
+            <span>Analyze Issue</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- Section 3 Inputs: Semantic Issue Search -->
+      <section class="card" aria-labelledby="search-form-title">
+        <h2 class="card-title" id="search-form-title">
+          <span>🧠</span> Semantic Issue Search
+        </h2>
+        <form id="search-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="search-query-input">Free-Text Query</label>
+            <input type="text" id="search-query-input" placeholder="e.g., memory leak in reactive netty client" required>
+          </div>
+          <button type="submit" class="btn" id="search-btn">
+            <span>Search Issues</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- Section 4 Inputs: Contributor Assistant -->
+      <section class="card" aria-labelledby="contributor-form-title">
+        <h2 class="card-title" id="contributor-form-title">
+          <span>💬</span> Onboarding Assistant
+        </h2>
+        <form id="contributor-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="contributor-question-input">Ask Onboarding Question</label>
+            <textarea id="contributor-question-input" rows="3" placeholder="e.g., How do I set up my developer environment for building the project?" required></textarea>
+          </div>
+          <button type="submit" class="btn" id="ask-btn">
+            <span>Ask Assistant</span>
+          </button>
+        </form>
+      </section>
+
+    </aside>
+
+    <!-- Main Content Area: Outputs and Data Presentation -->
+    <article class="main-content">
+      
+      <!-- Section 1 Output: Triage Results -->
+      <section class="card" id="analysis-hub-card">
+        <h2 class="card-title">Analysis Hub</h2>
+        <div id="triage-result-container">
+          <div class="hub-placeholder">
+            <div class="hub-placeholder-icon">🔎</div>
+            <h3>No Analysis Performed</h3>
+            <p>Fill in the Owner/Repo and Issue Number on the left pane and click "Analyze Issue" to fetch telemetry and triage analysis.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 Output: Duplicate Candidates (Shown under/beside analysis) -->
+      <section class="card" id="duplicates-card">
+        <h2 class="card-title">Duplicate Candidates</h2>
+        <div id="duplicates-result-container">
+          <div class="hub-placeholder">
+            <div class="hub-placeholder-icon">🤝</div>
+            <h3>No Duplicates Evaluated</h3>
+            <p>Duplicate candidates will be calculated and populated here once an issue is successfully analyzed.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 Output: Semantic Search Results -->
+      <section class="card" id="search-hub-card">
+        <h2 class="card-title">Semantic Search Results</h2>
+        <div id="search-result-container">
+          <div class="hub-placeholder">
+            <div class="hub-placeholder-icon">📚</div>
+            <h3>No Search Performed</h3>
+            <p>Enter a query in the Semantic Search card to scan the knowledge base for matching tickets.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 Output: Contributor Q&A Hub -->
+      <section class="card" id="contributor-hub-card">
+        <h2 class="card-title">Contributor Onboarding Answer</h2>
+        <div id="contributor-result-container">
+          <div class="hub-placeholder">
+            <div class="hub-placeholder-icon">💡</div>
+            <h3>Assistant Idle</h3>
+            <p>Ask a question using the form on the sidebar to get detailed onboarding answers and instructions.</p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+chromadb
+sentence-transformers
+pydantic
+python-dotenv
+requests
+PyGithub
