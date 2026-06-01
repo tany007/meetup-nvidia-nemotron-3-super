@@ -67,7 +67,7 @@ Open `frontend/index.html` directly in a browser, or serve it with any static fi
 The header displays a live connection indicator - it pings `/health` on the load and reflects the backend status in real time.
 
 ## Architecture
-![Architecture Diagram](img/Maintainer-Workflow-Intelligence-Architecture-v2.png)
+![Architecture Diagram](architecture/Maintainer-Workflow-Intelligence-Architecture-v2.png)
 
 ## Project Structure
 
